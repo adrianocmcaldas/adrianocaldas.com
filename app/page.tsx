@@ -95,6 +95,9 @@ function ProjectList({
           <span className="project-name">
             {live ? <span className="project-live" aria-hidden="true" /> : null}
             {project.name}
+            {project.tag ? (
+              <span className="project-tag">{project.tag}</span>
+            ) : null}
           </span>
           <small>{project.descriptor}</small>
           <span className="project-domain">{projectDomain(project.url)}</span>
