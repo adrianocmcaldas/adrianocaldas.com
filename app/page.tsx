@@ -235,6 +235,7 @@ export default function Home() {
       alternateName: "Adriano Caldas",
       url: "https://adrianocaldas.com",
       image: "https://adrianocaldas.com/adriano-caldas.jpeg",
+      sameAs: ["https://github.com/adrianocmcaldas"],
       nationality: "Brazilian",
       affiliation: {
         "@type": "Organization",
