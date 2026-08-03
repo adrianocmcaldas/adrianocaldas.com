@@ -1,12 +1,21 @@
 # adrianocaldas.com
 
-Site pessoal de Adriano César Moreno Caldas. A página apresenta sua visão de
-tecnologia, áreas de atuação, projetos próprios, colaborações e trajetória sem
-publicar dados pessoais de contato.
+Site pessoal de [Adriano César Moreno Caldas](https://adrianocaldas.com) — estratégia, sistemas e operação, desde 2003.
 
-O conteúdo está disponível em português, inglês, espanhol e norueguês Bokmål.
-O idioma é associado ao navegador; idiomas não suportados usam inglês. A escolha
-manual fica registrada no parâmetro `?lang=`.
+![Hero do site — identidade «Sinal»](docs/hero.jpg)
+
+Identidade visual **«Sinal»**: uma sala de controlo escura onde uma linha de sinal âmbar — eco do início em processamento digital de sinais, em 2003 — atravessa o hero e liga os cinco canais da página (perfil, atuação, projetos, trajetória, contato).
+
+![Formulário de contato protegido](docs/contato.jpg)
+
+## Características
+
+- **Next.js 16** (App Router) com exportação estática — sem servidor, sem banco de dados, sem cookies, sem analytics;
+- **4 idiomas** (pt · en · es · nb) com deteção pelo navegador e seleção manual via `?lang=`;
+- **Contato protegido**: Cloudflare Turnstile + honeypot + Lambda de envio — nenhum e-mail pessoal publicado;
+- **Acessibilidade**: contraste WCAG AA documentado no CSS, foco visível em todos os controlos, animações sob `prefers-reduced-motion`;
+- **JSON-LD** (Person) e metadados hreflang para as quatro línguas;
+- Testes de conteúdo que validam o HTML renderizado, a completude i18n e o contrato do formulário.
 
 ## Desenvolvimento local
 
@@ -14,33 +23,23 @@ Requer Node.js 22.13 ou superior.
 
 ```bash
 npm install
-npm run dev
+npm run dev        # prévia em http://localhost:3000 (--port 3001 se ocupada)
 ```
 
-A prévia abre normalmente em `http://localhost:3000`. Se essa porta estiver em
-uso, execute `npm run dev -- --port 3001`.
+Para o formulário funcionar localmente, copie `.env.example` para `.env.local` e defina a chave pública do widget em `NEXT_PUBLIC_TURNSTILE_SITE_KEY` (em localhost é usada automaticamente a chave de teste do Turnstile).
 
 ## Validação
 
 ```bash
-npm test
+npm test           # build + testes de conteúdo
 npm run lint
 npm audit --omit=dev
 ```
 
-O site é estático: não usa banco de dados, cookies ou analytics. O formulário
-utiliza a mesma Lambda SMTP e o mesmo widget Cloudflare Turnstile da Cinteca.
-Este site envia o identificador fixo `adrianocaldas`; a Lambda mantém o
-destinatário único em `CONTACT_TO_EMAIL` e seleciona
-`CONTACT_FROM_EMAIL_AC`, configurado como `web-ac@cinteca.es`.
-
-Copie `.env.example` para `.env.local` e informe a chave pública do widget em
-`NEXT_PUBLIC_TURNSTILE_SITE_KEY`. Na Lambda, inclua as origens exatas
-`https://adrianocaldas.com` e `https://www.adrianocaldas.com` em
-`ALLOWED_ORIGINS`. Em `TURNSTILE_EXPECTED_HOSTNAMES` e no widget Turnstile,
-inclua `adrianocaldas.com` e `www.adrianocaldas.com`.
-
 ## Publicação
 
-O projeto pode ser gerado com `npm run build` e publicado como site estático na
-infraestrutura escolhida para o domínio `adrianocaldas.com`.
+```bash
+npm run build:s3   # gera out/ (exportação estática)
+```
+
+O conteúdo de `out/` é publicado como site estático (S3 + CloudFront) no domínio `adrianocaldas.com`.
