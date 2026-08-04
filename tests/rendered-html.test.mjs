@@ -77,7 +77,7 @@ test("contains privacy-safe contact and machine-readable identity", async () => 
   assert.match(html, /name="website"/);
   assert.match(html, /name="privacy"/);
   assert.match(html, /https:\/\/cinteca\.es\/\?lang=en#privacidad/);
-  assert.match(html, /No cookies or analytics\. Protected contact\./);
+  assert.match(html, /No advertising or audience analytics\. Protected contact\./);
   assert.doesNotMatch(html, /mailto:|tel:|google-analytics|googletagmanager/i);
   assert.match(html, /adriano-caldas-social\.png/);
 });

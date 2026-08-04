@@ -150,7 +150,7 @@ export const translations: Record<Locale, Translation> = {
     metadata: {
       title: "Adriano César Moreno Caldas · Technology, product and operations",
       description:
-        "Personal website of Adriano César Moreno Caldas: technology leadership, software, artificial intelligence, cloud, telecommunications, automation and digital products.",
+        "Personal website of Adriano César Moreno Caldas: technology leadership, software, artificial intelligence, cloud, telecommunications, automation and digital products — including NordixBIOS, the Agentic AI Factory.",
     },
     navigationLabel: "Main navigation",
     languageLabel: "Language",
@@ -161,7 +161,7 @@ export const translations: Record<Locale, Translation> = {
       statement:
         "Technology seen end to end: from decision to production, from algorithm to global operations.",
       trajectoryLink: "Explore the journey",
-      orbitAria: "Map of technology activities",
+      orbitAria: "Technology channels",
       coordinate: "GLOBAL / 24H",
       now: "today",
       strategy: "strategy",
@@ -181,7 +181,7 @@ export const translations: Record<Locale, Translation> = {
     },
     signal: {
       label: "Activity overview",
-      items: ["Technology leadership", "Owned products", "Teams and partners", "Global activity"],
+      items: ["Technology leadership", "Owned products", "Selected collaborations", "Global activity"],
     },
     profile: {
       label: "Profile",
@@ -246,7 +246,7 @@ export const translations: Record<Locale, Translation> = {
       items: [
         { time: "2003", title: "Signals, algorithms and models", description: "The beginning of continuous work with digital signal processing and artificial intelligence applications." },
         { time: "2004", title: "CINTE · Telecommunications", description: "The incorporation of CINTE marked the start of a business journey focused on telecommunications and technology." },
-        { time: "2014", title: "AD Caldas Innotec, S.A.", description: "Spanish corporate structure, tax ID A66316399, linked to Cinteca to develop products, provide services and lead technology initiatives." },
+        { time: "2014", title: "AD Caldas Innotec, S.A.", description: "Spanish corporate structure, tax ID A66316399, owner of the Cinteca technology brand, created to develop products, provide services and lead technology initiatives." },
         { time: "TODAY", title: "Global ecosystem", description: "Owned products, international collaborations and work spanning software, AI, infrastructure and connected systems." },
       ],
     },
@@ -261,14 +261,14 @@ export const translations: Record<Locale, Translation> = {
         send: "Send securely", sending: "Sending…", success: "Message sent securely. I will reply by email.", error: "The message could not be sent. Review the fields and try again.", turnstileError: "Human verification expired or failed. Please try again.", configurationError: "The protected channel is not yet configured for this domain.",
       },
     },
-    footer: { back: "Back to the top", privacyNote: "No cookies or analytics. Protected contact.", legal: "Legal notice", privacy: "Privacy" },
+    footer: { back: "Back to the top", privacyNote: "No advertising or audience analytics. Protected contact.", legal: "Legal notice", privacy: "Privacy" },
     jsonDescription: "Technology leadership, software creation, artificial intelligence, telecommunications, automation and global infrastructure operations.",
   },
   pt: {
     htmlLang: "pt-BR",
     metadata: {
       title: "Adriano César Moreno Caldas · Tecnologia, produto e operação",
-      description: "Site pessoal de Adriano César Moreno Caldas: liderança tecnológica, software, inteligência artificial, cloud, telecomunicações, automação e produtos digitais.",
+      description: "Site pessoal de Adriano César Moreno Caldas: liderança tecnológica, software, inteligência artificial, cloud, telecomunicações, automação e produtos digitais — incluindo o NordixBIOS, a Agentic AI Factory.",
     },
     navigationLabel: "Navegação principal",
     languageLabel: "Idioma",
@@ -277,10 +277,10 @@ export const translations: Record<Locale, Translation> = {
     hero: {
       kicker: "Desde 2003 · atuação global",
       statement: "Tecnologia vista de ponta a ponta: da decisão ao sistema em produção, do algoritmo à operação global.",
-      trajectoryLink: "Conhecer a trajetória", orbitAria: "Mapa de atuação tecnológica", coordinate: "GLOBAL / 24H", now: "hoje", strategy: "estratégia", software: "software", ai: "IA", operations: "operação", systems: "sistemas",
+      trajectoryLink: "Conhecer a trajetória", orbitAria: "Canais de atuação", coordinate: "GLOBAL / 24H", now: "hoje", strategy: "estratégia", software: "software", ai: "IA", operations: "operação", systems: "sistemas",
     },
     console: { channel: "Canal", readout: "Leituras", collaborations: "Colaborações", status: "Estado", statusValue: "Em operação", protectedContact: "Contato protegido", secureChannel: "Canal seguro" },
-    signal: { label: "Resumo da atuação", items: ["Liderança tecnológica", "Produtos próprios", "Times e parceiros", "Atuação global"] },
+    signal: { label: "Resumo da atuação", items: ["Liderança tecnológica", "Produtos próprios", "Colaborações selecionadas", "Atuação global"] },
     profile: {
       label: "Perfil", tag: "Uma visão integrada", title: "Conectar visão, tecnologia e realidade operacional.", portraitLabel: "Pessoa por trás dos sistemas", portraitText: "Curiosidade técnica, visão de conjunto e compromisso com o que acontece depois da entrega.",
       lead: "Adriano atua entre direção tecnológica, criação de produtos e operação de ambientes complexos. Já exerceu funções de CTO em organizações multinacionais e conduz iniciativas próprias e de terceiros em diferentes países.",
@@ -305,14 +305,14 @@ export const translations: Record<Locale, Translation> = {
       label: "Projetos", tag: "Ecossistema em movimento", title: "Produtos próprios. Colaborações internacionais.", intro: "Marcas e plataformas diferentes, conectadas por uma mesma forma de pensar: construir, integrar, operar e evoluir.", ownedTitle: "Ecossistema próprio", collaborationTitle: "Colaborações selecionadas",
       owned: [
         { name: "NordixBIOS", descriptor: "Agentic AI Factory — infraestrutura para criar e operar trabalhadores de IA no seu software", url: projectUrls.nordixBios, tag: "Mais recente" },
-        { name: "Cinteca", descriptor: "Marca vinculada à AD Caldas Innotec, S.A.", url: projectUrls.cinteca },
+        { name: "Cinteca", descriptor: "Marca tecnológica vinculada à AD Caldas Innotec, S.A.", url: projectUrls.cinteca },
         { name: "LegalNeuron", descriptor: "IA e software para o setor jurídico", url: projectUrls.legalNeuron },
         { name: "NCS Engine", descriptor: "Infraestrutura para cargas de IA", url: projectUrls.ncsEngine },
         { name: "Nordix Systems", descriptor: "Sistemas e soluções digitais", url: projectUrls.nordixSystems },
         { name: "CINTE", descriptor: "Empresa de telecomunicações e tecnologia constituída em 2004", url: projectUrls.cinte },
       ],
       collaborations: [
-        { name: "Plorea · Noruega", descriptor: "Unified commerce, POS e e-commerce", url: projectUrls.plorea },
+        { name: "Plorea · Noruega", descriptor: "Comércio unificado, POS e e-commerce", url: projectUrls.plorea },
         { name: "Grupo Laeras", descriptor: "Plataformas e presença digital", url: projectUrls.laeras },
         { name: "Innocards Loyalty · Suíça", descriptor: "Fidelização e experiências conectadas", url: projectUrls.innocards },
       ],
@@ -322,7 +322,7 @@ export const translations: Record<Locale, Translation> = {
       items: [
         { time: "2003", title: "Sinais, algoritmos e modelos", description: "Início de um trabalho contínuo com processamento digital de sinais e aplicações de inteligência artificial." },
         { time: "2004", title: "CINTE · Telecomunicações", description: "A constituição da CINTE marcou o início de uma trajetória empresarial voltada a telecomunicações e tecnologia." },
-        { time: "2014", title: "AD Caldas Innotec, S.A.", description: "Estrutura societária espanhola, NIF A66316399, vinculada à Cinteca para desenvolver produtos, prestar serviços e conduzir iniciativas tecnológicas." },
+        { time: "2014", title: "AD Caldas Innotec, S.A.", description: "Estrutura societária espanhola, NIF A66316399, titular da marca tecnológica Cinteca, para desenvolver produtos, prestar serviços e conduzir iniciativas tecnológicas." },
         { time: "HOJE", title: "Ecossistema global", description: "Produtos próprios, colaborações internacionais e atuação sobre software, IA, infraestrutura e sistemas conectados." },
       ],
     },
@@ -330,20 +330,20 @@ export const translations: Record<Locale, Translation> = {
       eyebrow: "Conversas profissionais e novos projetos", title: "Vamos conectar o próximo sistema.", intro: "Envie sua mensagem por este canal protegido. Nenhum e-mail pessoal ou número de telefone é publicado neste site.", protectedLabel: "Protegido por Cloudflare Turnstile",
       form: { name: "Nome", email: "Seu e-mail", company: "Empresa", optional: "opcional", subject: "Assunto", message: "Mensagem", privacyAcknowledgement: "Li e aceito o tratamento dos dados para responder a esta mensagem, nos termos da", privacyLink: "política de privacidade", verification: "Verificação humana", send: "Enviar com segurança", sending: "Enviando…", success: "Mensagem enviada com segurança. Responderei por e-mail.", error: "Não foi possível enviar. Revise os campos e tente novamente.", turnstileError: "A verificação humana expirou ou falhou. Tente novamente.", configurationError: "O canal protegido ainda não está configurado para este domínio." },
     },
-    footer: { back: "Voltar ao início", privacyNote: "Sem cookies ou analytics. Contato protegido.", legal: "Aviso legal", privacy: "Privacidade" },
+    footer: { back: "Voltar ao início", privacyNote: "Sem analytics de publicidade ou audiência. Contato protegido.", legal: "Aviso legal", privacy: "Privacidade" },
     jsonDescription: "Liderança tecnológica, criação de software, inteligência artificial, telecomunicações, automação e operação de infraestruturas globais.",
   },
   es: {
     htmlLang: "es",
     metadata: {
       title: "Adriano César Moreno Caldas · Tecnología, producto y operaciones",
-      description: "Sitio personal de Adriano César Moreno Caldas: liderazgo tecnológico, software, inteligencia artificial, cloud, telecomunicaciones, automatización y productos digitales.",
+      description: "Sitio personal de Adriano César Moreno Caldas: liderazgo tecnológico, software, inteligencia artificial, cloud, telecomunicaciones, automatización y productos digitales — incluido NordixBIOS, la Agentic AI Factory.",
     },
     navigationLabel: "Navegación principal", languageLabel: "Idioma", headerLine: "Estrategia · Sistemas · Operaciones",
     nav: { profile: "Perfil", capabilities: "Actividad", projects: "Proyectos", trajectory: "Trayectoria", contact: "Contacto", menu: "Menú" },
-    hero: { kicker: "Desde 2003 · actividad global", statement: "Tecnología de extremo a extremo: de la decisión al sistema en producción, del algoritmo a la operación global.", trajectoryLink: "Conocer la trayectoria", orbitAria: "Mapa de actividad tecnológica", coordinate: "GLOBAL / 24H", now: "hoy", strategy: "estrategia", software: "software", ai: "IA", operations: "operaciones", systems: "sistemas" },
+    hero: { kicker: "Desde 2003 · actividad global", statement: "Tecnología de extremo a extremo: de la decisión al sistema en producción, del algoritmo a la operación global.", trajectoryLink: "Conocer la trayectoria", orbitAria: "Canales de actividad", coordinate: "GLOBAL / 24H", now: "hoy", strategy: "estrategia", software: "software", ai: "IA", operations: "operaciones", systems: "sistemas" },
     console: { channel: "Canal", readout: "Lecturas", collaborations: "Colaboraciones", status: "Estado", statusValue: "En operación", protectedContact: "Contacto protegido", secureChannel: "Canal seguro" },
-    signal: { label: "Resumen de la actividad", items: ["Liderazgo tecnológico", "Productos propios", "Equipos y socios", "Actividad global"] },
+    signal: { label: "Resumen de la actividad", items: ["Liderazgo tecnológico", "Productos propios", "Colaboraciones seleccionadas", "Actividad global"] },
     profile: {
       label: "Perfil", tag: "Una visión integrada", title: "Conectar visión, tecnología y realidad operativa.", portraitLabel: "La persona detrás de los sistemas", portraitText: "Curiosidad técnica, visión de conjunto y compromiso con lo que ocurre después de la entrega.",
       lead: "Adriano trabaja entre la dirección tecnológica, la creación de productos y la operación de entornos complejos. Ha desempeñado funciones de CTO en organizaciones multinacionales y dirige iniciativas propias y de terceros en distintos países.",
@@ -368,7 +368,7 @@ export const translations: Record<Locale, Translation> = {
       label: "Proyectos", tag: "Ecosistema en movimiento", title: "Productos propios. Colaboraciones internacionales.", intro: "Marcas y plataformas diferentes, conectadas por una misma forma de pensar: construir, integrar, operar y evolucionar.", ownedTitle: "Ecosistema propio", collaborationTitle: "Colaboraciones seleccionadas",
       owned: [
         { name: "NordixBIOS", descriptor: "Agentic AI Factory — infraestructura para crear y operar trabajadores IA en tu software", url: projectUrls.nordixBios, tag: "Más reciente" },
-        { name: "Cinteca", descriptor: "Marca vinculada a AD Caldas Innotec, S.A.", url: projectUrls.cinteca },
+        { name: "Cinteca", descriptor: "Marca tecnológica vinculada a AD Caldas Innotec, S.A.", url: projectUrls.cinteca },
         { name: "LegalNeuron", descriptor: "IA y software para el sector jurídico", url: projectUrls.legalNeuron },
         { name: "NCS Engine", descriptor: "Infraestructura para cargas de IA", url: projectUrls.ncsEngine },
         { name: "Nordix Systems", descriptor: "Sistemas y soluciones digitales", url: projectUrls.nordixSystems },
@@ -385,7 +385,7 @@ export const translations: Record<Locale, Translation> = {
       items: [
         { time: "2003", title: "Señales, algoritmos y modelos", description: "Inicio de un trabajo continuo con procesamiento digital de señales y aplicaciones de inteligencia artificial." },
         { time: "2004", title: "CINTE · Telecomunicaciones", description: "La constitución de CINTE marcó el inicio de una trayectoria empresarial centrada en telecomunicaciones y tecnología." },
-        { time: "2014", title: "AD Caldas Innotec, S.A.", description: "Estructura societaria española, NIF A66316399, vinculada a Cinteca para desarrollar productos, prestar servicios y dirigir iniciativas tecnológicas." },
+        { time: "2014", title: "AD Caldas Innotec, S.A.", description: "Estructura societaria española, NIF A66316399, titular de la marca tecnológica Cinteca, para desarrollar productos, prestar servicios y dirigir iniciativas tecnológicas." },
         { time: "HOY", title: "Ecosistema global", description: "Productos propios, colaboraciones internacionales y actividad en software, IA, infraestructura y sistemas conectados." },
       ],
     },
@@ -393,20 +393,20 @@ export const translations: Record<Locale, Translation> = {
       eyebrow: "Conversaciones profesionales y nuevos proyectos", title: "Conectemos el próximo sistema.", intro: "Envíe su mensaje a través de este canal protegido. En este sitio no se publica ningún correo personal ni número de teléfono.", protectedLabel: "Protegido por Cloudflare Turnstile",
       form: { name: "Nombre", email: "Su correo electrónico", company: "Empresa", optional: "opcional", subject: "Asunto", message: "Mensaje", privacyAcknowledgement: "Acepto el tratamiento de mis datos para responder a este mensaje conforme a la", privacyLink: "política de privacidad", verification: "Verificación humana", send: "Enviar de forma segura", sending: "Enviando…", success: "Mensaje enviado de forma segura. Responderé por correo electrónico.", error: "No se ha podido enviar el mensaje. Revise los campos e inténtelo de nuevo.", turnstileError: "La verificación humana ha caducado o ha fallado. Inténtelo de nuevo.", configurationError: "El canal protegido todavía no está configurado para este dominio." },
     },
-    footer: { back: "Volver al inicio", privacyNote: "Sin cookies ni analytics. Contacto protegido.", legal: "Aviso legal", privacy: "Privacidad" },
+    footer: { back: "Volver al inicio", privacyNote: "Sin analítica publicitaria ni de audiencia. Contacto protegido.", legal: "Aviso legal", privacy: "Privacidad" },
     jsonDescription: "Liderazgo tecnológico, creación de software, inteligencia artificial, telecomunicaciones, automatización y operación de infraestructuras globales.",
   },
   nb: {
     htmlLang: "nb",
     metadata: {
       title: "Adriano César Moreno Caldas · Teknologi, produkt og drift",
-      description: "Adriano César Moreno Caldas’ personlige nettsted: teknologiledelse, programvare, kunstig intelligens, sky, telekommunikasjon, automatisering og digitale produkter.",
+      description: "Adriano César Moreno Caldas’ personlige nettsted: teknologiledelse, programvare, kunstig intelligens, sky, telekommunikasjon, automatisering og digitale produkter — inkludert NordixBIOS, Agentic AI Factory.",
     },
     navigationLabel: "Hovednavigasjon", languageLabel: "Språk", headerLine: "Strategi · Systemer · Drift",
     nav: { profile: "Profil", capabilities: "Kompetanse", projects: "Prosjekter", trajectory: "Utvikling", contact: "Kontakt", menu: "Meny" },
-    hero: { kicker: "Siden 2003 · global aktivitet", statement: "Teknologi fra ende til ende: fra beslutning til produksjon, fra algoritme til global drift.", trajectoryLink: "Se utviklingen", orbitAria: "Kart over teknologisk aktivitet", coordinate: "GLOBAL / 24T", now: "i dag", strategy: "strategi", software: "programvare", ai: "KI", operations: "drift", systems: "systemer" },
+    hero: { kicker: "Siden 2003 · global aktivitet", statement: "Teknologi fra ende til ende: fra beslutning til produksjon, fra algoritme til global drift.", trajectoryLink: "Se utviklingen", orbitAria: "Teknologikanaler", coordinate: "GLOBAL / 24T", now: "i dag", strategy: "strategi", software: "programvare", ai: "KI", operations: "drift", systems: "systemer" },
     console: { channel: "Kanal", readout: "Avlesninger", collaborations: "Samarbeid", status: "Status", statusValue: "I drift", protectedContact: "Beskyttet kontakt", secureChannel: "Sikker kanal" },
-    signal: { label: "Oversikt over aktivitet", items: ["Teknologiledelse", "Egne produkter", "Team og partnere", "Global aktivitet"] },
+    signal: { label: "Oversikt over aktivitet", items: ["Teknologiledelse", "Egne produkter", "Utvalgte samarbeid", "Global aktivitet"] },
     profile: {
       label: "Profil", tag: "Et helhetlig perspektiv", title: "Å koble sammen visjon, teknologi og operativ virkelighet.", portraitLabel: "Personen bak systemene", portraitText: "Teknisk nysgjerrighet, helhetsblikk og ansvar for det som skjer etter leveransen.",
       lead: "Adriano arbeider i skjæringspunktet mellom teknologiledelse, produktutvikling og drift av komplekse miljøer. Han har hatt CTO-roller i multinasjonale virksomheter og leder egne og eksterne initiativer i flere land.",
@@ -448,7 +448,7 @@ export const translations: Record<Locale, Translation> = {
       items: [
         { time: "2003", title: "Signaler, algoritmer og modeller", description: "Starten på kontinuerlig arbeid med digital signalbehandling og anvendelser av kunstig intelligens." },
         { time: "2004", title: "CINTE · Telekommunikasjon", description: "Etableringen av CINTE markerte starten på en forretningsreise med fokus på telekommunikasjon og teknologi." },
-        { time: "2014", title: "AD Caldas Innotec, S.A.", description: "Spansk selskapsstruktur, skatte-ID A66316399, knyttet til Cinteca for å utvikle produkter, levere tjenester og lede teknologiske initiativer." },
+        { time: "2014", title: "AD Caldas Innotec, S.A.", description: "Spansk selskapsstruktur, skatte-ID A66316399, eier av teknologimerket Cinteca, for å utvikle produkter, levere tjenester og lede teknologiske initiativer." },
         { time: "I DAG", title: "Globalt økosystem", description: "Egne produkter, internasjonale samarbeid og aktivitet innen programvare, KI, infrastruktur og sammenkoblede systemer." },
       ],
     },
@@ -456,7 +456,7 @@ export const translations: Record<Locale, Translation> = {
       eyebrow: "Profesjonelle samtaler og nye prosjekter", title: "La oss koble sammen det neste systemet.", intro: "Send meldingen gjennom denne beskyttede kanalen. Ingen personlig e-postadresse eller telefonnummer publiseres på nettstedet.", protectedLabel: "Beskyttet av Cloudflare Turnstile",
       form: { name: "Navn", email: "Din e-post", company: "Selskap", optional: "valgfritt", subject: "Emne", message: "Melding", privacyAcknowledgement: "Jeg godtar behandling av opplysningene mine for å besvare denne meldingen i henhold til", privacyLink: "personvernerklæringen", verification: "Menneskelig verifisering", send: "Send sikkert", sending: "Sender…", success: "Meldingen er sendt sikkert. Jeg svarer på e-post.", error: "Meldingen kunne ikke sendes. Kontroller feltene og prøv igjen.", turnstileError: "Den menneskelige verifiseringen utløp eller mislyktes. Prøv igjen.", configurationError: "Den beskyttede kanalen er ennå ikke konfigurert for dette domenet." },
     },
-    footer: { back: "Tilbake til toppen", privacyNote: "Ingen informasjonskapsler eller analyse. Beskyttet kontakt.", legal: "Juridisk informasjon", privacy: "Personvern" },
+    footer: { back: "Tilbake til toppen", privacyNote: "Ingen annonse- eller publikumsanalyse. Beskyttet kontakt.", legal: "Juridisk informasjon", privacy: "Personvern" },
     jsonDescription: "Teknologiledelse, utvikling av programvare, kunstig intelligens, telekommunikasjon, automatisering og global infrastrukturdrift.",
   },
 };

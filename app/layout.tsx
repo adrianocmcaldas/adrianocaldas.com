@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://adrianocaldas.com"),
   title: "Adriano César Moreno Caldas · Technology, product and operations",
   description:
-    "Personal website of Adriano César Moreno Caldas: technology leadership, software, artificial intelligence, cloud, telecommunications, automation and digital products.",
+    "Personal website of Adriano César Moreno Caldas: technology leadership, software, artificial intelligence, cloud, telecommunications, automation and digital products — including NordixBIOS, the Agentic AI Factory.",
   alternates: {
     canonical: "https://adrianocaldas.com",
     languages: {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "Adriano César Moreno Caldas",
     title: "Adriano César Moreno Caldas · Technology, product and operations",
     description:
-      "Strategy, digital products, artificial intelligence and systems in global operation.",
+      "Strategy, digital products, artificial intelligence and systems in global operation — including NordixBIOS, the Agentic AI Factory.",
     images: [
       {
         url: "/adriano-caldas-social.png",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Adriano César Moreno Caldas · Technology, product and operations",
     description:
-      "Strategy, digital products, artificial intelligence and systems in global operation.",
+      "Strategy, digital products, artificial intelligence and systems in global operation — including NordixBIOS, the Agentic AI Factory.",
     images: ["/adriano-caldas-social.png"],
   },
   icons: {

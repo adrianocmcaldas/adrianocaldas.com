@@ -278,8 +278,8 @@ export default function Home() {
     { href: "#contato", label: copy.nav.contact },
   ];
 
-  // The five channels of the old orbit diagram, kept as console chips with the
-  // same anchors and the same localized labels.
+  // The five technology channels, rendered as console chips with their
+  // section anchors and localized labels.
   const channelChips = [
     { href: "#dir", label: copy.hero.strategy },
     { href: "#sft", label: copy.hero.software },
@@ -311,7 +311,7 @@ export default function Home() {
       label: copy.signal.items[2],
     },
     {
-      value: `${String(localeOptions.length).padStart(2, "0")} / GLOBAL`,
+      value: copy.hero.coordinate,
       label: copy.signal.items[3],
     },
   ];
