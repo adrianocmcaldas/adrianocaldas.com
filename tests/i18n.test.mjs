@@ -70,6 +70,10 @@ test("every locale lists the same patent register and equity holding", () => {
     }
     assert.match(copy.patents.groups[0].holder, /AD Caldas Innotec, S\.A\./, `${locale} applicant`);
     assert.match(copy.patents.groups[1].holder, /Adriano César Moreno Caldas/, `${locale} holder`);
+    for (const patent of copy.patents.groups[1].patents) {
+      assert.match(patent.status, /2012/, `${locale} ${patent.number} archived by INPI in 2012`);
+    }
+    assert.match(copy.projects.holdings[0].descriptor, /CTO/, `${locale} AI Robotics role`);
     assert.deepEqual(
       copy.projects.holdings.map((project) => project.url),
       ["https://airobotics.no"],

@@ -278,7 +278,7 @@ export const translations: Record<Locale, Translation> = {
         { name: "Innocards Loyalty · Switzerland", descriptor: "Loyalty and connected experiences", url: projectUrls.innocards },
       ],
       holdings: [
-        { name: "AI Robotics · Norway", descriptor: "Autonomous service robots for Norwegian businesses — cleaning, serving and transport — installed and supported nationwide", url: projectUrls.aiRobotics },
+        { name: "AI Robotics · Norway", descriptor: "Partner and CTO since 2025 — autonomous service robots for Norwegian businesses: cleaning, serving and transport, installed and supported nationwide", url: projectUrls.aiRobotics },
       ],
     },
     patents: {
@@ -302,9 +302,9 @@ export const translations: Record<Locale, Translation> = {
           title: "Brazil · INPI",
           holder: "Holder and inventor: Adriano César Moreno Caldas",
           patents: [
-            { number: patentNumbers.fuelSwitch, title: "Fuel selector switch for bi-fuel or tri-fuel cars (petrol, ethanol and CNG) with precise digital measurement of the CNG volume", status: "Filed 22 Mar 2006 · published 20 Nov 2007" },
-            { number: patentNumbers.stethoscope, title: "Digital electronic stethoscope with data storage, wireless transmission, graph display and diagnostic suggestion", status: "Filed 11 Oct 2007 · published 16 Jun 2009" },
-            { number: patentNumbers.fuelAnalyser, title: "Vehicle fuel level and quality analyser for filling stations, with data transmission and remote processing of the collected information", status: "Filed 27 May 2008 · published 17 Feb 2010" },
+            { number: patentNumbers.fuelSwitch, title: "Fuel selector switch for bi-fuel or tri-fuel cars (petrol, ethanol and CNG) with precise digital measurement of the CNG volume", status: "Filed 22 Mar 2006 · published 20 Nov 2007 · archived 2012" },
+            { number: patentNumbers.stethoscope, title: "Digital electronic stethoscope with data storage, wireless transmission, graph display and diagnostic suggestion", status: "Filed 11 Oct 2007 · published 16 Jun 2009 · archived 2012" },
+            { number: patentNumbers.fuelAnalyser, title: "Vehicle fuel level and quality analyser for filling stations, with data transmission and remote processing of the collected information", status: "Filed 27 May 2008 · published 17 Feb 2010 · archived 2012" },
           ],
         },
       ],
@@ -389,7 +389,7 @@ export const translations: Record<Locale, Translation> = {
         { name: "Innocards Loyalty · Suíça", descriptor: "Fidelização e experiências conectadas", url: projectUrls.innocards },
       ],
       holdings: [
-        { name: "AI Robotics · Noruega", descriptor: "Robôs de serviço autônomos para empresas na Noruega — limpeza, atendimento e transporte — com instalação e suporte em todo o país", url: projectUrls.aiRobotics },
+        { name: "AI Robotics · Noruega", descriptor: "Sócio e CTO desde 2025 — robôs de serviço autônomos para empresas na Noruega: limpeza, atendimento e transporte, com instalação e suporte em todo o país", url: projectUrls.aiRobotics },
       ],
     },
     patents: {
@@ -408,9 +408,9 @@ export const translations: Record<Locale, Translation> = {
         {
           title: "Brasil · INPI", holder: "Titular e inventor: Adriano César Moreno Caldas",
           patents: [
-            { number: patentNumbers.fuelSwitch, title: "Chave comutadora para automóveis bicombustível ou tricombustível (gasolina, álcool e GNV) com medição digital precisa do volume de GNV", status: "Depósito em 22/03/2006 · publicado em 20/11/2007" },
-            { number: patentNumbers.stethoscope, title: "Estetoscópio eletrônico digital com armazenamento de dados, transmissão sem fio, exibição de gráficos e sugestão de diagnóstico", status: "Depósito em 11/10/2007 · publicado em 16/06/2009" },
-            { number: patentNumbers.fuelAnalyser, title: "Analisador de nível e qualidade de combustível veicular em postos de abastecimento, com transmissão de dados e processamento remoto das informações coletadas", status: "Depósito em 27/05/2008 · publicado em 17/02/2010" },
+            { number: patentNumbers.fuelSwitch, title: "Chave comutadora para automóveis bicombustível ou tricombustível (gasolina, álcool e GNV) com medição digital precisa do volume de GNV", status: "Depósito em 22/03/2006 · publicado em 20/11/2007 · arquivado em 2012" },
+            { number: patentNumbers.stethoscope, title: "Estetoscópio eletrônico digital com armazenamento de dados, transmissão sem fio, exibição de gráficos e sugestão de diagnóstico", status: "Depósito em 11/10/2007 · publicado em 16/06/2009 · arquivado em 2012" },
+            { number: patentNumbers.fuelAnalyser, title: "Analisador de nível e qualidade de combustível veicular em postos de abastecimento, com transmissão de dados e processamento remoto das informações coletadas", status: "Depósito em 27/05/2008 · publicado em 17/02/2010 · arquivado em 2012" },
           ],
         },
       ],
@@ -480,7 +480,7 @@ export const translations: Record<Locale, Translation> = {
         { name: "Innocards Loyalty · Suiza", descriptor: "Fidelización y experiencias conectadas", url: projectUrls.innocards },
       ],
       holdings: [
-        { name: "AI Robotics · Noruega", descriptor: "Robots de servicio autónomos para empresas en Noruega — limpieza, servicio de sala y transporte — con instalación y soporte en todo el país", url: projectUrls.aiRobotics },
+        { name: "AI Robotics · Noruega", descriptor: "Socio y CTO desde 2025 — robots de servicio autónomos para empresas en Noruega: limpieza, servicio de sala y transporte, con instalación y soporte en todo el país", url: projectUrls.aiRobotics },
       ],
     },
     patents: {
@@ -499,9 +499,9 @@ export const translations: Record<Locale, Translation> = {
         {
           title: "Brasil · INPI", holder: "Titular e inventor: Adriano César Moreno Caldas",
           patents: [
-            { number: patentNumbers.fuelSwitch, title: "Conmutador de combustible para automóviles bicombustible o tricombustible (gasolina, alcohol y GNV) con medición digital precisa del volumen de GNV", status: "Presentada el 22/03/2006 · publicada el 20/11/2007" },
-            { number: patentNumbers.stethoscope, title: "Estetoscopio electrónico digital con almacenamiento de datos, transmisión inalámbrica, visualización de gráficos y sugerencia de diagnóstico", status: "Presentada el 11/10/2007 · publicada el 16/06/2009" },
-            { number: patentNumbers.fuelAnalyser, title: "Analizador de nivel y calidad de combustible vehicular en estaciones de servicio, con transmisión de datos y procesamiento remoto de la información recogida", status: "Presentada el 27/05/2008 · publicada el 17/02/2010" },
+            { number: patentNumbers.fuelSwitch, title: "Conmutador de combustible para automóviles bicombustible o tricombustible (gasolina, alcohol y GNV) con medición digital precisa del volumen de GNV", status: "Presentada el 22/03/2006 · publicada el 20/11/2007 · archivada en 2012" },
+            { number: patentNumbers.stethoscope, title: "Estetoscopio electrónico digital con almacenamiento de datos, transmisión inalámbrica, visualización de gráficos y sugerencia de diagnóstico", status: "Presentada el 11/10/2007 · publicada el 16/06/2009 · archivada en 2012" },
+            { number: patentNumbers.fuelAnalyser, title: "Analizador de nivel y calidad de combustible vehicular en estaciones de servicio, con transmisión de datos y procesamiento remoto de la información recogida", status: "Presentada el 27/05/2008 · publicada el 17/02/2010 · archivada en 2012" },
           ],
         },
       ],
@@ -571,7 +571,7 @@ export const translations: Record<Locale, Translation> = {
         { name: "Innocards Loyalty · Sveits", descriptor: "Lojalitet og sammenkoblede opplevelser", url: projectUrls.innocards },
       ],
       holdings: [
-        { name: "AI Robotics · Norge", descriptor: "Autonome serviceroboter for norske virksomheter — rengjøring, servering og transport — med installasjon og service i hele landet", url: projectUrls.aiRobotics },
+        { name: "AI Robotics · Norge", descriptor: "Medeier og CTO siden 2025 — autonome serviceroboter for norske virksomheter: rengjøring, servering og transport, med installasjon og service i hele landet", url: projectUrls.aiRobotics },
       ],
     },
     patents: {
@@ -590,9 +590,9 @@ export const translations: Record<Locale, Translation> = {
         {
           title: "Brasil · INPI", holder: "Innehaver og oppfinner: Adriano César Moreno Caldas",
           patents: [
-            { number: patentNumbers.fuelSwitch, title: "Drivstoffvelger for biler med to eller tre drivstoff (bensin, etanol og CNG) med presis digital måling av CNG-volumet", status: "Levert 22.03.2006 · publisert 20.11.2007" },
-            { number: patentNumbers.stethoscope, title: "Digitalt elektronisk stetoskop med datalagring, trådløs overføring, grafisk visning og diagnoseforslag", status: "Levert 11.10.2007 · publisert 16.06.2009" },
-            { number: patentNumbers.fuelAnalyser, title: "Analysator for nivå og kvalitet på drivstoff ved bensinstasjoner, med dataoverføring og fjernbehandling av innsamlede data", status: "Levert 27.05.2008 · publisert 17.02.2010" },
+            { number: patentNumbers.fuelSwitch, title: "Drivstoffvelger for biler med to eller tre drivstoff (bensin, etanol og CNG) med presis digital måling av CNG-volumet", status: "Levert 22.03.2006 · publisert 20.11.2007 · henlagt 2012" },
+            { number: patentNumbers.stethoscope, title: "Digitalt elektronisk stetoskop med datalagring, trådløs overføring, grafisk visning og diagnoseforslag", status: "Levert 11.10.2007 · publisert 16.06.2009 · henlagt 2012" },
+            { number: patentNumbers.fuelAnalyser, title: "Analysator for nivå og kvalitet på drivstoff ved bensinstasjoner, med dataoverføring og fjernbehandling av innsamlede data", status: "Levert 27.05.2008 · publisert 17.02.2010 · henlagt 2012" },
           ],
         },
       ],
