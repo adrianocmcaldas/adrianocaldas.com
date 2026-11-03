@@ -41,8 +41,3 @@ next-env.d.ts
 /outputs/
 /work/
 tsconfig.tsbuildinfo
-
-# Patent source documents (OEPM/INPI filings and receipts). The site shows
-# only bibliographic data; the Spanish applications are not yet published by
-# the OEPM, so the PDFs must never reach this public repository.
-/docs/patents/
