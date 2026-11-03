@@ -274,6 +274,7 @@ export default function Home() {
     { href: "#perfil", label: copy.nav.profile },
     { href: "#atuacao", label: copy.nav.capabilities },
     { href: "#projetos", label: copy.nav.projects },
+    { href: "#patentes", label: copy.nav.patents },
     { href: "#trajetoria", label: copy.nav.trajectory },
     { href: "#contato", label: copy.nav.contact },
   ];
@@ -288,6 +289,11 @@ export default function Home() {
     { href: "#aut", label: copy.hero.systems },
   ];
 
+  const patentCount = copy.patents.groups.reduce(
+    (total, group) => total + group.patents.length,
+    0,
+  );
+
   const readoutRows = [
     { label: copy.signal.items[0], value: `2003 → ${copy.hero.now}` },
     {
@@ -297,6 +303,10 @@ export default function Home() {
     {
       label: copy.console.collaborations,
       value: String(copy.projects.collaborations.length).padStart(2, "0"),
+    },
+    {
+      label: copy.nav.patents,
+      value: String(patentCount).padStart(2, "0"),
     },
   ];
 
@@ -543,23 +553,73 @@ export default function Home() {
             </div>
             <ProjectList projects={copy.projects.owned} live />
           </section>
-          <section aria-labelledby="collab-title">
-            <div className="project-heading">
-              <h3 id="collab-title">{copy.projects.collaborationTitle}</h3>
-              <span>
-                {String(copy.projects.collaborations.length).padStart(2, "0")}
-              </span>
-            </div>
-            <ProjectList projects={copy.projects.collaborations} />
-          </section>
+          <div className="project-stack">
+            <section aria-labelledby="collab-title">
+              <div className="project-heading">
+                <h3 id="collab-title">{copy.projects.collaborationTitle}</h3>
+                <span>
+                  {String(copy.projects.collaborations.length).padStart(2, "0")}
+                </span>
+              </div>
+              <ProjectList projects={copy.projects.collaborations} />
+            </section>
+            <section aria-labelledby="holdings-title">
+              <div className="project-heading">
+                <h3 id="holdings-title">{copy.projects.holdingsTitle}</h3>
+                <span>
+                  {String(copy.projects.holdings.length).padStart(2, "0")}
+                </span>
+              </div>
+              <ProjectList projects={copy.projects.holdings} />
+            </section>
+          </div>
         </div>
+      </section>
+
+      <section className="patents section-shell" id="patentes">
+        <div className="section-tag">
+          <SignalLine variant="mini" />
+          <span className="section-channel">
+            {copy.console.channel} 04 — {copy.patents.label}
+          </span>
+          <span className="section-note">{copy.patents.tag}</span>
+        </div>
+        <div className="section-intro">
+          <h2 data-reveal="">{copy.patents.title}</h2>
+          <p>{copy.patents.intro}</p>
+        </div>
+
+        <div className="patent-columns">
+          {copy.patents.groups.map((group, groupIndex) => (
+            <section
+              aria-labelledby={`patent-group-${groupIndex}`}
+              key={group.patents[0]?.number ?? groupIndex}
+            >
+              <div className="project-heading">
+                <h3 id={`patent-group-${groupIndex}`}>{group.title}</h3>
+                <span>{String(group.patents.length).padStart(2, "0")}</span>
+              </div>
+              <p className="patent-holder">{group.holder}</p>
+              <ol className="patent-list">
+                {group.patents.map((patent) => (
+                  <li className="patent-row" key={patent.number} data-reveal="">
+                    <span className="patent-number">{patent.number}</span>
+                    <p className="patent-title">{patent.title}</p>
+                    <small>{patent.status}</small>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          ))}
+        </div>
+        <p className="patent-note">{copy.patents.note}</p>
       </section>
 
       <section className="trajectory section-shell" id="trajetoria">
         <div className="section-tag">
           <SignalLine variant="mini" />
           <span className="section-channel">
-            {copy.console.channel} 04 — {copy.trajectory.label}
+            {copy.console.channel} 05 — {copy.trajectory.label}
           </span>
           <span className="section-note">{copy.trajectory.tag}</span>
         </div>
@@ -582,7 +642,7 @@ export default function Home() {
           <div className="section-tag">
             <SignalLine variant="mini" />
             <span className="section-channel">
-              {copy.console.channel} 05 — {copy.nav.contact}
+              {copy.console.channel} 06 — {copy.nav.contact}
             </span>
             <span className="section-note">{copy.console.secureChannel}</span>
           </div>

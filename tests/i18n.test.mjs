@@ -49,6 +49,35 @@ test("every locale contains the complete page and contact form", () => {
   }
 });
 
+test("every locale lists the same patent register and equity holding", () => {
+  const expectedNumbers = [
+    ["P202631350", "P202631351", "P202631352", "P202631353"],
+    ["PI 0600924-7", "PI 0706462-4", "PI 0801894-4"],
+  ];
+
+  for (const locale of locales) {
+    const copy = translations[locale];
+    assert.deepEqual(
+      copy.patents.groups.map((group) => group.patents.map((patent) => patent.number)),
+      expectedNumbers,
+      `${locale} patent numbers`,
+    );
+    for (const group of copy.patents.groups) {
+      for (const patent of group.patents) {
+        assert.ok(patent.title.length > 0, `${locale} ${patent.number} title`);
+        assert.ok(patent.status.length > 0, `${locale} ${patent.number} status`);
+      }
+    }
+    assert.match(copy.patents.groups[0].holder, /AD Caldas Innotec, S\.A\./, `${locale} applicant`);
+    assert.match(copy.patents.groups[1].holder, /Adriano César Moreno Caldas/, `${locale} holder`);
+    assert.deepEqual(
+      copy.projects.holdings.map((project) => project.url),
+      ["https://airobotics.no"],
+      `${locale} equity holdings`,
+    );
+  }
+});
+
 test("excluded titles are absent from every language", () => {
   const content = JSON.stringify(translations);
   assert.doesNotMatch(content, /engenheir|engenharia|mestrado|\bmestre\b/i);

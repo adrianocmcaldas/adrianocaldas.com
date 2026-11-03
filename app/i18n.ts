@@ -14,6 +14,18 @@ export type Project = {
   tag?: string;
 };
 
+export type Patent = {
+  number: string;
+  title: string;
+  status: string;
+};
+
+export type PatentGroup = {
+  title: string;
+  holder: string;
+  patents: Patent[];
+};
+
 export type ContactCopy = {
   name: string;
   email: string;
@@ -42,6 +54,7 @@ type Translation = {
     profile: string;
     capabilities: string;
     projects: string;
+    patents: string;
     trajectory: string;
     contact: string;
     menu: string;
@@ -95,8 +108,18 @@ type Translation = {
     intro: string;
     ownedTitle: string;
     collaborationTitle: string;
+    holdingsTitle: string;
     owned: Project[];
     collaborations: Project[];
+    holdings: Project[];
+  };
+  patents: {
+    label: string;
+    tag: string;
+    title: string;
+    intro: string;
+    groups: PatentGroup[];
+    note: string;
   };
   trajectory: {
     label: string;
@@ -142,6 +165,19 @@ const projectUrls = {
   plorea: "https://plorea.no",
   laeras: "https://grupolaeras.com",
   innocards: "https://innocardloyalty.ch",
+  aiRobotics: "https://airobotics.no",
+};
+
+// Patent numbers are official identifiers and stay identical in every
+// language; only titles and status lines are localised.
+const patentNumbers = {
+  reservoir: "P202631350",
+  budget: "P202631351",
+  expansion: "P202631352",
+  rescue: "P202631353",
+  fuelSwitch: "PI 0600924-7",
+  stethoscope: "PI 0706462-4",
+  fuelAnalyser: "PI 0801894-4",
 };
 
 export const translations: Record<Locale, Translation> = {
@@ -155,7 +191,7 @@ export const translations: Record<Locale, Translation> = {
     navigationLabel: "Main navigation",
     languageLabel: "Language",
     headerLine: "Strategy · Systems · Operations",
-    nav: { profile: "Profile", capabilities: "Capabilities", projects: "Projects", trajectory: "Journey", contact: "Contact", menu: "Menu" },
+    nav: { profile: "Profile", capabilities: "Capabilities", projects: "Projects", patents: "Patents", trajectory: "Journey", contact: "Contact", menu: "Menu" },
     hero: {
       kicker: "Since 2003 · global activity",
       statement:
@@ -225,6 +261,7 @@ export const translations: Record<Locale, Translation> = {
         "Different brands and platforms connected by the same approach: build, integrate, operate and evolve.",
       ownedTitle: "Owned ecosystem",
       collaborationTitle: "Selected collaborations",
+      holdingsTitle: "Equity holdings",
       owned: [
         { name: "NordixBIOS", descriptor: "Agentic AI Factory — infrastructure to create and operate AI workers inside your software", url: projectUrls.nordixBios, tag: "Latest" },
         { name: "Cinteca", descriptor: "Technology brand linked to AD Caldas Innotec, S.A.", url: projectUrls.cinteca },
@@ -238,6 +275,38 @@ export const translations: Record<Locale, Translation> = {
         { name: "Grupo Laeras", descriptor: "Platforms and digital presence", url: projectUrls.laeras },
         { name: "Innocards Loyalty · Switzerland", descriptor: "Loyalty and connected experiences", url: projectUrls.innocards },
       ],
+      holdings: [
+        { name: "AI Robotics · Norway", descriptor: "Autonomous service robots for Norwegian businesses — cleaning, serving and transport — installed and supported nationwide", url: projectUrls.aiRobotics },
+      ],
+    },
+    patents: {
+      label: "Patents",
+      tag: "Industrial property",
+      title: "Registered inventions, from embedded electronics to neural networks.",
+      intro:
+        "Seven patent applications in two countries: four filed in Spain in 2026 on neural-network architecture and training, with AD Caldas Innotec, S.A. as applicant, and three filed in Brazil between 2006 and 2008, with Adriano as holder and inventor.",
+      groups: [
+        {
+          title: "Spain · OEPM",
+          holder: "Applicant: AD Caldas Innotec, S.A.",
+          patents: [
+            { number: patentNumbers.reservoir, title: "Method and system for conditional computation with a reservoir of addressable neurons and exact-cardinality selection", status: "Filed 02 Oct 2026 · pending" },
+            { number: patentNumbers.budget, title: "Method and system for allocating a per-element compute budget across the layers of a neural network", status: "Filed 02 Oct 2026 · pending" },
+            { number: patentNumbers.expansion, title: "Method for expanding a reservoir of addressable units in a neural network while preserving the computed function", status: "Filed 02 Oct 2026 · pending" },
+            { number: patentNumbers.rescue, title: "Method for rescuing under-used units by splitting, in a reservoir of addressable units of a neural network", status: "Filed 02 Oct 2026 · pending" },
+          ],
+        },
+        {
+          title: "Brazil · INPI",
+          holder: "Holder and inventor: Adriano César Moreno Caldas",
+          patents: [
+            { number: patentNumbers.fuelSwitch, title: "Fuel selector switch for bi-fuel or tri-fuel cars (petrol, ethanol and CNG) with precise digital measurement of the CNG volume", status: "Filed 22 Mar 2006 · published 20 Nov 2007" },
+            { number: patentNumbers.stethoscope, title: "Digital electronic stethoscope with data storage, wireless transmission, graph display and diagnostic suggestion", status: "Filed 11 Oct 2007 · published 16 Jun 2009" },
+            { number: patentNumbers.fuelAnalyser, title: "Vehicle fuel level and quality analyser for filling stations, with data transmission and remote processing of the collected information", status: "Filed 27 May 2008 · published 17 Feb 2010" },
+          ],
+        },
+      ],
+      note: "Titles translated from the original Spanish and Portuguese.",
     },
     trajectory: {
       label: "Journey",
@@ -273,7 +342,7 @@ export const translations: Record<Locale, Translation> = {
     navigationLabel: "Navegação principal",
     languageLabel: "Idioma",
     headerLine: "Estratégia · Sistemas · Operação",
-    nav: { profile: "Perfil", capabilities: "Atuação", projects: "Projetos", trajectory: "Trajetória", contact: "Contato", menu: "Menu" },
+    nav: { profile: "Perfil", capabilities: "Atuação", projects: "Projetos", patents: "Patentes", trajectory: "Trajetória", contact: "Contato", menu: "Menu" },
     hero: {
       kicker: "Desde 2003 · atuação global",
       statement: "Tecnologia vista de ponta a ponta: da decisão ao sistema em produção, do algoritmo à operação global.",
@@ -302,7 +371,7 @@ export const translations: Record<Locale, Translation> = {
       ],
     },
     projects: {
-      label: "Projetos", tag: "Ecossistema em movimento", title: "Produtos próprios. Colaborações internacionais.", intro: "Marcas e plataformas diferentes, conectadas por uma mesma forma de pensar: construir, integrar, operar e evoluir.", ownedTitle: "Ecossistema próprio", collaborationTitle: "Colaborações selecionadas",
+      label: "Projetos", tag: "Ecossistema em movimento", title: "Produtos próprios. Colaborações internacionais.", intro: "Marcas e plataformas diferentes, conectadas por uma mesma forma de pensar: construir, integrar, operar e evoluir.", ownedTitle: "Ecossistema próprio", collaborationTitle: "Colaborações selecionadas", holdingsTitle: "Participações societárias",
       owned: [
         { name: "NordixBIOS", descriptor: "Agentic AI Factory — infraestrutura para criar e operar trabalhadores de IA no seu software", url: projectUrls.nordixBios, tag: "Mais recente" },
         { name: "Cinteca", descriptor: "Marca tecnológica vinculada à AD Caldas Innotec, S.A.", url: projectUrls.cinteca },
@@ -316,6 +385,33 @@ export const translations: Record<Locale, Translation> = {
         { name: "Grupo Laeras", descriptor: "Plataformas e presença digital", url: projectUrls.laeras },
         { name: "Innocards Loyalty · Suíça", descriptor: "Fidelização e experiências conectadas", url: projectUrls.innocards },
       ],
+      holdings: [
+        { name: "AI Robotics · Noruega", descriptor: "Robôs de serviço autônomos para empresas na Noruega — limpeza, atendimento e transporte — com instalação e suporte em todo o país", url: projectUrls.aiRobotics },
+      ],
+    },
+    patents: {
+      label: "Patentes", tag: "Propriedade industrial", title: "Invenções registradas, da eletrônica embarcada às redes neurais.",
+      intro: "Sete pedidos de patente em dois países: quatro apresentados na Espanha em 2026 sobre arquitetura e treinamento de redes neurais, tendo a AD Caldas Innotec, S.A. como requerente, e três depositados no Brasil entre 2006 e 2008, com Adriano como titular e inventor.",
+      groups: [
+        {
+          title: "Espanha · OEPM", holder: "Requerente: AD Caldas Innotec, S.A.",
+          patents: [
+            { number: patentNumbers.reservoir, title: "Método e sistema de computação condicional com reservatório de neurônios endereçáveis e seleção de cardinalidade exata", status: "Pedido apresentado em 02/10/2026 · em tramitação" },
+            { number: patentNumbers.budget, title: "Método e sistema de distribuição de um orçamento de computação por elemento entre camadas de uma rede neural", status: "Pedido apresentado em 02/10/2026 · em tramitação" },
+            { number: patentNumbers.expansion, title: "Método de ampliação de um reservatório de unidades endereçáveis de uma rede neural que preserva a função calculada", status: "Pedido apresentado em 02/10/2026 · em tramitação" },
+            { number: patentNumbers.rescue, title: "Método de resgate por divisão de unidades subutilizadas em um reservatório de unidades endereçáveis de uma rede neural", status: "Pedido apresentado em 02/10/2026 · em tramitação" },
+          ],
+        },
+        {
+          title: "Brasil · INPI", holder: "Titular e inventor: Adriano César Moreno Caldas",
+          patents: [
+            { number: patentNumbers.fuelSwitch, title: "Chave comutadora para automóveis bicombustível ou tricombustível (gasolina, álcool e GNV) com medição digital precisa do volume de GNV", status: "Depósito em 22/03/2006 · publicado em 20/11/2007" },
+            { number: patentNumbers.stethoscope, title: "Estetoscópio eletrônico digital com armazenamento de dados, transmissão sem fio, exibição de gráficos e sugestão de diagnóstico", status: "Depósito em 11/10/2007 · publicado em 16/06/2009" },
+            { number: patentNumbers.fuelAnalyser, title: "Analisador de nível e qualidade de combustível veicular em postos de abastecimento, com transmissão de dados e processamento remoto das informações coletadas", status: "Depósito em 27/05/2008 · publicado em 17/02/2010" },
+          ],
+        },
+      ],
+      note: "Títulos dos pedidos espanhóis traduzidos do original em espanhol.",
     },
     trajectory: {
       label: "Trajetória", tag: "Evolução contínua", title: "Uma linha contínua entre pesquisa, produto e escala.",
@@ -340,7 +436,7 @@ export const translations: Record<Locale, Translation> = {
       description: "Sitio personal de Adriano César Moreno Caldas: liderazgo tecnológico, software, inteligencia artificial, cloud, telecomunicaciones, automatización y productos digitales — incluido NordixBIOS, la Agentic AI Factory.",
     },
     navigationLabel: "Navegación principal", languageLabel: "Idioma", headerLine: "Estrategia · Sistemas · Operaciones",
-    nav: { profile: "Perfil", capabilities: "Actividad", projects: "Proyectos", trajectory: "Trayectoria", contact: "Contacto", menu: "Menú" },
+    nav: { profile: "Perfil", capabilities: "Actividad", projects: "Proyectos", patents: "Patentes", trajectory: "Trayectoria", contact: "Contacto", menu: "Menú" },
     hero: { kicker: "Desde 2003 · actividad global", statement: "Tecnología de extremo a extremo: de la decisión al sistema en producción, del algoritmo a la operación global.", trajectoryLink: "Conocer la trayectoria", orbitAria: "Canales de actividad", coordinate: "GLOBAL / 24H", now: "hoy", strategy: "estrategia", software: "software", ai: "IA", operations: "operaciones", systems: "sistemas" },
     console: { channel: "Canal", readout: "Lecturas", collaborations: "Colaboraciones", status: "Estado", statusValue: "En operación", protectedContact: "Contacto protegido", secureChannel: "Canal seguro" },
     signal: { label: "Resumen de la actividad", items: ["Liderazgo tecnológico", "Productos propios", "Colaboraciones seleccionadas", "Actividad global"] },
@@ -365,7 +461,7 @@ export const translations: Record<Locale, Translation> = {
       ],
     },
     projects: {
-      label: "Proyectos", tag: "Ecosistema en movimiento", title: "Productos propios. Colaboraciones internacionales.", intro: "Marcas y plataformas diferentes, conectadas por una misma forma de pensar: construir, integrar, operar y evolucionar.", ownedTitle: "Ecosistema propio", collaborationTitle: "Colaboraciones seleccionadas",
+      label: "Proyectos", tag: "Ecosistema en movimiento", title: "Productos propios. Colaboraciones internacionales.", intro: "Marcas y plataformas diferentes, conectadas por una misma forma de pensar: construir, integrar, operar y evolucionar.", ownedTitle: "Ecosistema propio", collaborationTitle: "Colaboraciones seleccionadas", holdingsTitle: "Participaciones societarias",
       owned: [
         { name: "NordixBIOS", descriptor: "Agentic AI Factory — infraestructura para crear y operar trabajadores IA en tu software", url: projectUrls.nordixBios, tag: "Más reciente" },
         { name: "Cinteca", descriptor: "Marca tecnológica vinculada a AD Caldas Innotec, S.A.", url: projectUrls.cinteca },
@@ -379,6 +475,33 @@ export const translations: Record<Locale, Translation> = {
         { name: "Grupo Laeras", descriptor: "Plataformas y presencia digital", url: projectUrls.laeras },
         { name: "Innocards Loyalty · Suiza", descriptor: "Fidelización y experiencias conectadas", url: projectUrls.innocards },
       ],
+      holdings: [
+        { name: "AI Robotics · Noruega", descriptor: "Robots de servicio autónomos para empresas en Noruega — limpieza, servicio de sala y transporte — con instalación y soporte en todo el país", url: projectUrls.aiRobotics },
+      ],
+    },
+    patents: {
+      label: "Patentes", tag: "Propiedad industrial", title: "Invenciones registradas, de la electrónica embebida a las redes neuronales.",
+      intro: "Siete solicitudes de patente en dos países: cuatro presentadas en España en 2026 sobre arquitectura y entrenamiento de redes neuronales, con AD Caldas Innotec, S.A. como solicitante, y tres presentadas en Brasil entre 2006 y 2008, con Adriano como titular e inventor.",
+      groups: [
+        {
+          title: "España · OEPM", holder: "Solicitante: AD Caldas Innotec, S.A.",
+          patents: [
+            { number: patentNumbers.reservoir, title: "Método y sistema de computación condicional con reservorio de neuronas direccionables y selección de cardinalidad exacta", status: "Solicitud presentada el 02/10/2026 · en tramitación" },
+            { number: patentNumbers.budget, title: "Método y sistema de reparto de un presupuesto de cómputo por elemento entre capas de una red neuronal", status: "Solicitud presentada el 02/10/2026 · en tramitación" },
+            { number: patentNumbers.expansion, title: "Método de ampliación de un reservorio de unidades direccionables de una red neuronal que preserva la función calculada", status: "Solicitud presentada el 02/10/2026 · en tramitación" },
+            { number: patentNumbers.rescue, title: "Método de rescate por división de unidades infrautilizadas en un reservorio de unidades direccionables de una red neuronal", status: "Solicitud presentada el 02/10/2026 · en tramitación" },
+          ],
+        },
+        {
+          title: "Brasil · INPI", holder: "Titular e inventor: Adriano César Moreno Caldas",
+          patents: [
+            { number: patentNumbers.fuelSwitch, title: "Conmutador de combustible para automóviles bicombustible o tricombustible (gasolina, alcohol y GNV) con medición digital precisa del volumen de GNV", status: "Presentada el 22/03/2006 · publicada el 20/11/2007" },
+            { number: patentNumbers.stethoscope, title: "Estetoscopio electrónico digital con almacenamiento de datos, transmisión inalámbrica, visualización de gráficos y sugerencia de diagnóstico", status: "Presentada el 11/10/2007 · publicada el 16/06/2009" },
+            { number: patentNumbers.fuelAnalyser, title: "Analizador de nivel y calidad de combustible vehicular en estaciones de servicio, con transmisión de datos y procesamiento remoto de la información recogida", status: "Presentada el 27/05/2008 · publicada el 17/02/2010" },
+          ],
+        },
+      ],
+      note: "Títulos de las solicitudes brasileñas traducidos del portugués original.",
     },
     trajectory: {
       label: "Trayectoria", tag: "Evolución continua", title: "Una línea continua entre investigación, producto y escala.",
@@ -403,7 +526,7 @@ export const translations: Record<Locale, Translation> = {
       description: "Adriano César Moreno Caldas’ personlige nettsted: teknologiledelse, programvare, kunstig intelligens, sky, telekommunikasjon, automatisering og digitale produkter — inkludert NordixBIOS, Agentic AI Factory.",
     },
     navigationLabel: "Hovednavigasjon", languageLabel: "Språk", headerLine: "Strategi · Systemer · Drift",
-    nav: { profile: "Profil", capabilities: "Kompetanse", projects: "Prosjekter", trajectory: "Utvikling", contact: "Kontakt", menu: "Meny" },
+    nav: { profile: "Profil", capabilities: "Kompetanse", projects: "Prosjekter", patents: "Patenter", trajectory: "Utvikling", contact: "Kontakt", menu: "Meny" },
     hero: { kicker: "Siden 2003 · global aktivitet", statement: "Teknologi fra ende til ende: fra beslutning til produksjon, fra algoritme til global drift.", trajectoryLink: "Se utviklingen", orbitAria: "Teknologikanaler", coordinate: "GLOBAL / 24T", now: "i dag", strategy: "strategi", software: "programvare", ai: "KI", operations: "drift", systems: "systemer" },
     console: { channel: "Kanal", readout: "Avlesninger", collaborations: "Samarbeid", status: "Status", statusValue: "I drift", protectedContact: "Beskyttet kontakt", secureChannel: "Sikker kanal" },
     signal: { label: "Oversikt over aktivitet", items: ["Teknologiledelse", "Egne produkter", "Utvalgte samarbeid", "Global aktivitet"] },
@@ -428,7 +551,7 @@ export const translations: Record<Locale, Translation> = {
       ],
     },
     projects: {
-      label: "Prosjekter", tag: "Et økosystem i bevegelse", title: "Egne produkter. Internasjonale samarbeid.", intro: "Ulike merker og plattformer, koblet sammen av samme tilnærming: bygge, integrere, drifte og videreutvikle.", ownedTitle: "Eget økosystem", collaborationTitle: "Utvalgte samarbeid",
+      label: "Prosjekter", tag: "Et økosystem i bevegelse", title: "Egne produkter. Internasjonale samarbeid.", intro: "Ulike merker og plattformer, koblet sammen av samme tilnærming: bygge, integrere, drifte og videreutvikle.", ownedTitle: "Eget økosystem", collaborationTitle: "Utvalgte samarbeid", holdingsTitle: "Eierandeler",
       owned: [
         { name: "NordixBIOS", descriptor: "Agentic AI Factory — infrastruktur for å skape og drifte KI-arbeidere i programvaren din", url: projectUrls.nordixBios, tag: "Nyeste" },
         { name: "Cinteca", descriptor: "Teknologimerke knyttet til AD Caldas Innotec, S.A.", url: projectUrls.cinteca },
@@ -442,6 +565,33 @@ export const translations: Record<Locale, Translation> = {
         { name: "Grupo Laeras", descriptor: "Plattformer og digital tilstedeværelse", url: projectUrls.laeras },
         { name: "Innocards Loyalty · Sveits", descriptor: "Lojalitet og sammenkoblede opplevelser", url: projectUrls.innocards },
       ],
+      holdings: [
+        { name: "AI Robotics · Norge", descriptor: "Autonome serviceroboter for norske virksomheter — rengjøring, servering og transport — med installasjon og service i hele landet", url: projectUrls.aiRobotics },
+      ],
+    },
+    patents: {
+      label: "Patenter", tag: "Industrielt rettsvern", title: "Registrerte oppfinnelser, fra innebygd elektronikk til nevrale nettverk.",
+      intro: "Sju patentsøknader i to land: fire levert i Spania i 2026 om arkitektur og trening av nevrale nettverk, med AD Caldas Innotec, S.A. som søker, og tre levert i Brasil mellom 2006 og 2008, med Adriano som innehaver og oppfinner.",
+      groups: [
+        {
+          title: "Spania · OEPM", holder: "Søker: AD Caldas Innotec, S.A.",
+          patents: [
+            { number: patentNumbers.reservoir, title: "Metode og system for betinget beregning med et reservoar av adresserbare nevroner og utvalg med eksakt kardinalitet", status: "Søknad levert 02.10.2026 · under behandling" },
+            { number: patentNumbers.budget, title: "Metode og system for fordeling av et beregningsbudsjett per element mellom lagene i et nevralt nettverk", status: "Søknad levert 02.10.2026 · under behandling" },
+            { number: patentNumbers.expansion, title: "Metode for utvidelse av et reservoar av adresserbare enheter i et nevralt nettverk som bevarer den beregnede funksjonen", status: "Søknad levert 02.10.2026 · under behandling" },
+            { number: patentNumbers.rescue, title: "Metode for redning av underutnyttede enheter ved deling i et reservoar av adresserbare enheter i et nevralt nettverk", status: "Søknad levert 02.10.2026 · under behandling" },
+          ],
+        },
+        {
+          title: "Brasil · INPI", holder: "Innehaver og oppfinner: Adriano César Moreno Caldas",
+          patents: [
+            { number: patentNumbers.fuelSwitch, title: "Drivstoffvelger for biler med to eller tre drivstoff (bensin, etanol og CNG) med presis digital måling av CNG-volumet", status: "Levert 22.03.2006 · publisert 20.11.2007" },
+            { number: patentNumbers.stethoscope, title: "Digitalt elektronisk stetoskop med datalagring, trådløs overføring, grafisk visning og diagnoseforslag", status: "Levert 11.10.2007 · publisert 16.06.2009" },
+            { number: patentNumbers.fuelAnalyser, title: "Analysator for nivå og kvalitet på drivstoff ved bensinstasjoner, med dataoverføring og fjernbehandling av innsamlede data", status: "Levert 27.05.2008 · publisert 17.02.2010" },
+          ],
+        },
+      ],
+      note: "Titlene er oversatt fra originalspråkene (spansk og portugisisk).",
     },
     trajectory: {
       label: "Utvikling", tag: "Kontinuerlig utvikling", title: "En sammenhengende linje mellom forskning, produkt og skala.",

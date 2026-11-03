@@ -49,6 +49,13 @@ test("renders Adriano's personal profile and selected work", async () => {
   assert.match(html, /Plorea · Norway/);
   assert.match(html, /https:\/\/plorea\.no/);
   assert.match(html, /Innocards Loyalty · Switzerland/);
+  assert.match(html, /AI Robotics · Norway/);
+  assert.match(html, /https:\/\/airobotics\.no/);
+  assert.match(html, /Equity holdings/);
+  assert.match(html, /id="patentes"/);
+  assert.match(html, /P202631350/);
+  assert.match(html, /PI 0801894-4/);
+  assert.match(html, /Applicant: AD Caldas Innotec, S\.A\./);
   assert.match(html, /<img[^>]+alt="Adriano César Moreno Caldas"/);
 });
 

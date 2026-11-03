@@ -1023,6 +1023,76 @@ a {
   transform: translate(4px, -4px);
 }
 
+/* Collaborations and equity holdings share the right-hand column. */
+.project-stack {
+  display: grid;
+  align-content: start;
+  gap: clamp(34px, 4vw, 56px);
+}
+
+/* ————————————————— Patents: the filing register ————————————————— */
+
+.patent-columns {
+  display: grid;
+  margin-top: clamp(52px, 6vw, 88px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(34px, 5vw, 80px);
+  align-items: start;
+}
+
+.patent-holder {
+  margin: 0;
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--hairline);
+  color: var(--text-soft);
+  font-family: var(--font-mono), monospace;
+  font-size: var(--label-sm);
+  letter-spacing: 0.06em;
+}
+
+.patent-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.patent-row {
+  display: grid;
+  padding: 22px 12px;
+  gap: 8px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.patent-number {
+  color: var(--amber);
+  font-family: var(--font-mono), monospace;
+  font-size: var(--label-lg);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.patent-title {
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.02rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+}
+
+.patent-row small {
+  color: var(--text-soft);
+  font-family: var(--font-mono), monospace;
+  font-size: var(--label-sm);
+  letter-spacing: 0.06em;
+}
+
+.patent-note {
+  margin: 28px 0 0;
+  color: var(--text-soft);
+  font-size: 0.8rem;
+}
+
 /* ————————————————— Trajectory: the vertical signal ————————————————— */
 
 .trajectory ol {
@@ -1457,7 +1527,8 @@ footer div a {
     max-width: 420px;
   }
 
-  .project-columns {
+  .project-columns,
+  .patent-columns {
     grid-template-columns: 1fr;
   }
 
@@ -1474,9 +1545,23 @@ footer div a {
   }
 }
 
+/* Six numbered channels no longer fit inline below 900px: the header
+   switches to the Menu disclosure here instead of at the phone breakpoint. */
 @media (max-width: 900px) {
+  .site-header {
+    grid-template-columns: 1fr auto;
+  }
+
   .site-header > p {
     display: none;
+  }
+
+  .site-header nav > a {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
   }
 }
 
