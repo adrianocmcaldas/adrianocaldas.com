@@ -159,6 +159,7 @@ const projectUrls = {
   cinteca: "https://cinteca.es",
   legalNeuron: "https://legalneuron.es",
   nordixBios: "https://nordixbios.com",
+  nordixAIgency: "https://nordixaigency.com",
   ncsEngine: "https://ncsengine.com",
   nordixSystems: "https://nordixsystems.com",
   cinte: "https://cinte.com.br",
@@ -264,6 +265,7 @@ export const translations: Record<Locale, Translation> = {
       holdingsTitle: "Equity holdings",
       owned: [
         { name: "NordixBIOS", descriptor: "Agentic AI Factory — infrastructure to create and operate AI workers inside your software", url: projectUrls.nordixBios, tag: "Latest" },
+        { name: "NordixAIgency", descriptor: "AI agents that carry out real actions across own and third-party software — calls, messages, bookings, orders — taking over digital work that used to need people", url: projectUrls.nordixAIgency },
         { name: "Cinteca", descriptor: "Technology brand linked to AD Caldas Innotec, S.A.", url: projectUrls.cinteca },
         { name: "LegalNeuron", descriptor: "AI and software for the legal sector", url: projectUrls.legalNeuron },
         { name: "NCS Engine", descriptor: "Infrastructure for AI workloads", url: projectUrls.ncsEngine },
@@ -374,6 +376,7 @@ export const translations: Record<Locale, Translation> = {
       label: "Projetos", tag: "Ecossistema em movimento", title: "Produtos próprios. Colaborações internacionais.", intro: "Marcas e plataformas diferentes, conectadas por uma mesma forma de pensar: construir, integrar, operar e evoluir.", ownedTitle: "Ecossistema próprio", collaborationTitle: "Colaborações selecionadas", holdingsTitle: "Participações societárias",
       owned: [
         { name: "NordixBIOS", descriptor: "Agentic AI Factory — infraestrutura para criar e operar trabalhadores de IA no seu software", url: projectUrls.nordixBios, tag: "Mais recente" },
+        { name: "NordixAIgency", descriptor: "Agentes de IA que executam ações reais em softwares próprios e de terceiros — chamadas, mensagens, agendas, pedidos — assumindo trabalho digital que antes exigia pessoas", url: projectUrls.nordixAIgency },
         { name: "Cinteca", descriptor: "Marca tecnológica vinculada à AD Caldas Innotec, S.A.", url: projectUrls.cinteca },
         { name: "LegalNeuron", descriptor: "IA e software para o setor jurídico", url: projectUrls.legalNeuron },
         { name: "NCS Engine", descriptor: "Infraestrutura para cargas de IA", url: projectUrls.ncsEngine },
@@ -464,6 +467,7 @@ export const translations: Record<Locale, Translation> = {
       label: "Proyectos", tag: "Ecosistema en movimiento", title: "Productos propios. Colaboraciones internacionales.", intro: "Marcas y plataformas diferentes, conectadas por una misma forma de pensar: construir, integrar, operar y evolucionar.", ownedTitle: "Ecosistema propio", collaborationTitle: "Colaboraciones seleccionadas", holdingsTitle: "Participaciones societarias",
       owned: [
         { name: "NordixBIOS", descriptor: "Agentic AI Factory — infraestructura para crear y operar trabajadores IA en tu software", url: projectUrls.nordixBios, tag: "Más reciente" },
+        { name: "NordixAIgency", descriptor: "Agentes de IA que ejecutan acciones reales en software propio y de terceros — llamadas, mensajes, reservas, pedidos — asumiendo trabajo digital que antes requería personas", url: projectUrls.nordixAIgency },
         { name: "Cinteca", descriptor: "Marca tecnológica vinculada a AD Caldas Innotec, S.A.", url: projectUrls.cinteca },
         { name: "LegalNeuron", descriptor: "IA y software para el sector jurídico", url: projectUrls.legalNeuron },
         { name: "NCS Engine", descriptor: "Infraestructura para cargas de IA", url: projectUrls.ncsEngine },
@@ -554,6 +558,7 @@ export const translations: Record<Locale, Translation> = {
       label: "Prosjekter", tag: "Et økosystem i bevegelse", title: "Egne produkter. Internasjonale samarbeid.", intro: "Ulike merker og plattformer, koblet sammen av samme tilnærming: bygge, integrere, drifte og videreutvikle.", ownedTitle: "Eget økosystem", collaborationTitle: "Utvalgte samarbeid", holdingsTitle: "Eierandeler",
       owned: [
         { name: "NordixBIOS", descriptor: "Agentic AI Factory — infrastruktur for å skape og drifte KI-arbeidere i programvaren din", url: projectUrls.nordixBios, tag: "Nyeste" },
+        { name: "NordixAIgency", descriptor: "KI-agenter som utfører reelle handlinger i egen og ekstern programvare — samtaler, meldinger, bookinger, bestillinger — og tar over digitalt arbeid som før krevde mennesker", url: projectUrls.nordixAIgency },
         { name: "Cinteca", descriptor: "Teknologimerke knyttet til AD Caldas Innotec, S.A.", url: projectUrls.cinteca },
         { name: "LegalNeuron", descriptor: "KI og programvare for juridisk sektor", url: projectUrls.legalNeuron },
         { name: "NCS Engine", descriptor: "Infrastruktur for KI-arbeidslaster", url: projectUrls.ncsEngine },

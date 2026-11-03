@@ -36,7 +36,7 @@ test("every locale contains the complete page and contact form", () => {
   for (const locale of locales) {
     const copy = translations[locale];
     assert.equal(copy.capabilities.items.length, 8, `${locale} capability count`);
-    assert.equal(copy.projects.owned.length, 6, `${locale} owned projects`);
+    assert.equal(copy.projects.owned.length, 7, `${locale} owned projects`);
     assert.equal(copy.projects.collaborations.length, 3, `${locale} collaborations`);
     assert.equal(copy.trajectory.items.length, 4, `${locale} trajectory items`);
     assert.ok(

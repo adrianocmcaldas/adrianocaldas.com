@@ -45,6 +45,8 @@ test("renders Adriano's personal profile and selected work", async () => {
   assert.match(html, /The incorporation of CINTE/);
   assert.match(html, /LegalNeuron/);
   assert.match(html, /NordixBIOS/);
+  assert.match(html, /NordixAIgency/);
+  assert.match(html, /https:\/\/nordixaigency\.com/);
   assert.match(html, /NCS Engine/);
   assert.match(html, /Plorea · Norway/);
   assert.match(html, /https:\/\/plorea\.no/);
