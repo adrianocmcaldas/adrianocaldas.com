@@ -91,16 +91,17 @@ test("contains privacy-safe contact and machine-readable identity", async () => 
   assert.match(html, /adriano-caldas-social\.png/);
 });
 
-test("uses the shared Lambda and Turnstile contact contract", async () => {
+test("uses the shared contact function and Turnstile contact contract", async () => {
   const source = await readFile(
     new URL("../app/contact-form.tsx", import.meta.url),
     "utf8",
   );
+  const declared = source.match(/const defaultContactEndpoint =\s*"([^"]+)"/);
 
-  assert.match(
-    source,
-    /https:\/\/u33x6xbn7dq2l5jn66hvv7ovc40bgiye\.lambda-url\.eu-central-1\.on\.aws\//,
-  );
+  assert.ok(declared, "app/contact-form.tsx declares the contact function's address");
+  assert.equal(declared[1], "https://fn-z9apn7.general.cinteca.space/");
+  assert.match(source, /process\.env\.NEXT_PUBLIC_CONTACT_ENDPOINT \|\| defaultContactEndpoint/);
+  assert.match(source, /fetch\(contactEndpoint,/);
   assert.match(source, /NEXT_PUBLIC_TURNSTILE_SITE_KEY/);
   assert.match(source, /challenges\.cloudflare\.com\/turnstile\/v0\/api\.js/);
   assert.match(source, /action: "contact"/);
